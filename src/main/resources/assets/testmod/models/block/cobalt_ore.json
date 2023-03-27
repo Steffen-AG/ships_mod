@@ -1,6 +1,6 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "testmod:block/black_opal_ore"
+		"all": "testmod:block/cobalt_ore"
 	}
 }
