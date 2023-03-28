@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "testmod:cobalt_ingot"
+    }
+  },
+  "pattern": [
+    "# #",
+    "###",
+    " # "
+  ],
+  "result": {
+    "item": "testmod:block_swapper"
+  }
+}

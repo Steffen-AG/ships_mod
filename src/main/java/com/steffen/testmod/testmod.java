@@ -45,6 +45,7 @@ public class testmod {
 	}
 	private void addCreative(CreativeModeTabEvent.BuildContents event) {
 		if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
+			event.accept(ModItems.COABLT_INGOT);
 			event.accept(ModItems.BLACK_OPAL);
 			event.accept(ModItems.RAW_BLACK_OPAL);
 		}
@@ -62,6 +63,9 @@ public class testmod {
 			event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
 		}
 		if(event.getTab() == ModCreativeModeTabs.TUTORIAL_TAB) {
+			event.accept(ModItems.TELEPORT_STAFF);
+			event.accept(ModItems.COABLT_INGOT);
+			event.accept(ModItems.BLOCK_SWAPPER);
 			event.accept(ModItems.BLACK_OPAL);
 			event.accept(ModItems.RAW_BLACK_OPAL);
 			event.accept(ModBlocks.BLACK_OPAL_BLOCK_OBJECT);
