@@ -21,7 +21,7 @@ public class ModBlocks {
 	public static final DeferredRegister<Block> BLOCKS = 
 			DeferredRegister.create(ForgeRegistries.BLOCKS, testmod.MODID);
 	
-	public static final RegistryObject<Block> BLACK_OPAL_BLOCK_OBJECT = registerBlock("black_opal_block",
+	public static final RegistryObject<Block> BLACK_OPAL_BLOCK = registerBlock("black_opal_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops() ));
 	
 	public static final RegistryObject<Block> COBALT_ORE = registerBlock("cobalt_ore",

@@ -9,26 +9,21 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModBlockStateProvider extends BlockStateProvider{
-	
-	public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-		super(output, testmod.MODID, exFileHelper);
-		// TODO Auto-generated constructor stub
-	}
+public class ModBlockStateProvider extends BlockStateProvider {
+    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, testmod.MODID, exFileHelper);
+    }
 
-	@Override
-	protected void registerStatesAndModels() {
-		blockWithItem(ModBlocks.COBALT_ORE);
-		blockWithItem(ModBlocks.BLACK_OPAL_BLOCK_OBJECT);
-		blockWithItem(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
-		blockWithItem(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);
-		blockWithItem(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
-		
-	}
-	
-	private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
-		simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
-	}
-	
+    @Override
+    protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.BLACK_OPAL_BLOCK);
+        blockWithItem(ModBlocks.COBALT_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
+        blockWithItem(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);
+        blockWithItem(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
+    }
 
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
 }
