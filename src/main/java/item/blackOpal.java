@@ -1,13 +1,14 @@
 package item;
 
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -21,28 +22,38 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 
 public class blackOpal extends Item {
+	int currBlock;
+	BlockState currBlockState;
+	
 	
 	public blackOpal(Properties properties) {
 		super(properties);
+		currBlock = 0;
+		currBlockState = null;
 	}
 	
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world,Player player,InteractionHand hand){
-		/*
-		BlockHitResult ray = raytrace(world, player, ClipContext.Fluid.NONE);
-		BlockPos lookPos = ray.getBlockPos().relative(ray.getDirection());
-		player.setPos(lookPos.getX(), lookPos.getY(), lookPos.getZ());
-		player.getCooldowns().addCooldown(this, 60);
-		player.fallDistance = 0F;
-		world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
-		*/
+		Inventory inventory = player.getInventory();
+		if(currBlock < player.getInventory().items.size()) {
+			currBlock++;
+			ItemStack currStack = inventory.getItem(currBlock);
+			if(Block.byItem(currStack.getItem()) != null && Block.byItem(currStack.getItem()) != Blocks.AIR ){
+				  currBlockState = Block.byItem(currStack.getItem()).defaultBlockState();
+			  }
+		}
+		
 		return super.use(world, player, hand);
 	}
 	@Override
 	   public InteractionResult useOn(UseOnContext p_41427_) {
 		  BlockPos repblock = p_41427_.getClickedPos();
 		  Level world = p_41427_.getLevel();
-		  world.setBlock(repblock, Blocks.DIRT.defaultBlockState(), EAT_DURATION);
+		  BlockState state = world.getBlockState(repblock);
+		  Block b = state.getBlock();
+		  Inventory inventory = p_41427_.getPlayer().getInventory(); 
+		  inventory.add(new ItemStack(b.asItem()));
+		  world.setBlock(repblock, currBlockState, EAT_DURATION);
 		  //world.destroyBlock(repblock, true);
 	      return InteractionResult.PASS;
 	   }
