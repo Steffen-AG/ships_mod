@@ -1,9 +1,13 @@
 package item;
 
 
-import net.minecraft.client.Minecraft;
+import java.util.List;
+
+import javax.annotation.Nullable;
+import net.minecraft.world.inventory.tooltip.TooltipComponent;
+import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -12,6 +16,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
@@ -29,7 +34,7 @@ public class blackOpal extends Item {
 	public blackOpal(Properties properties) {
 		super(properties);
 		currBlock = 0;
-		currBlockState = null;
+		currBlockState = Blocks.DIRT.defaultBlockState();
 	}
 	
 	@Override
@@ -37,10 +42,17 @@ public class blackOpal extends Item {
 		Inventory inventory = player.getInventory();
 		if(currBlock < player.getInventory().items.size()) {
 			currBlock++;
+			
 			ItemStack currStack = inventory.getItem(currBlock);
+			while(Block.byItem(currStack.getItem()) == Blocks.AIR && currBlock < player.getInventory().items.size()) {
+				currBlock++;
+				currStack = inventory.getItem(currBlock);
+			}
 			if(Block.byItem(currStack.getItem()) != null && Block.byItem(currStack.getItem()) != Blocks.AIR ){
 				  currBlockState = Block.byItem(currStack.getItem()).defaultBlockState();
 			  }
+		} else {
+			currBlock = 0;
 		}
 		
 		return super.use(world, player, hand);
@@ -57,6 +69,12 @@ public class blackOpal extends Item {
 		  //world.destroyBlock(repblock, true);
 	      return InteractionResult.PASS;
 	   }
+	@Override
+	 	public void appendHoverText(ItemStack p_41421_, @Nullable Level p_41422_, List<Component> p_41423_, TooltipFlag p_41424_) {
+			p_41423_.add(Component.literal(currBlockState.toString()));
+			
+			super.appendHoverText(p_41421_, p_41422_, p_41423_, p_41424_);
+	   	}
 
 	  protected static BlockHitResult raytrace(Level p_41436_, Player p_41437_, ClipContext.Fluid p_41438_) {
 		  double range = 15;
