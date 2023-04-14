@@ -14,7 +14,7 @@ public class ModItems {
 	
 	public static final RegistryObject<Item> BLACK_OPAL = ITEMS.register("black_opal", () -> new Item(new Item.Properties()));
 	
-	public static final RegistryObject<Item> BLOCK_SWAPPER = ITEMS.register("block_swapper", () -> new blackOpal(new Item.Properties()));
+	public static final RegistryObject<Item> BLOCK_SWAPPER = ITEMS.register("block_swapper", () -> new blackOpal(new Item.Properties().stacksTo(1)));
 	
 	public static final RegistryObject<Item> TELEPORT_STAFF = ITEMS.register("teleport_staff", () -> new teleportStaff(new Item.Properties()));
 	
