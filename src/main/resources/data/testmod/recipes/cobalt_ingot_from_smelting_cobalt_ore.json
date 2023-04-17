@@ -4,7 +4,7 @@
   "experience": 0.7,
   "group": "cobalt",
   "ingredient": {
-    "item": "testmod:cobalt_ore"
+    "item": "testmod:raw_cobalt"
   },
   "result": "testmod:cobalt_ingot"
 }

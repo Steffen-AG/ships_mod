@@ -24,11 +24,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
-        oreSmelting(consumer, List.of(ModItems.RAW_BLACK_OPAL.get()), RecipeCategory.MISC,
+        oreSmelting(consumer, List.of(ModItems.RAW_COBALT.get()), RecipeCategory.MISC,
                 ModItems.BLACK_OPAL.get(), 0.7f, 200, "black_opal");
 
         nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.BLACK_OPAL.get(), RecipeCategory.MISC,
-                ModBlocks.BLACK_OPAL_BLOCK.get());
+                ModBlocks.COBALT_BLOCK.get());
 
         // ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLACK_OPAL.get())
         //         .requires(ModBlocks.BLACK_OPAL_BLOCK.get())

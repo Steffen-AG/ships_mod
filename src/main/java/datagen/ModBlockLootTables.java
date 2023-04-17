@@ -18,16 +18,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.BLACK_OPAL_BLOCK.get());
+        dropSelf(ModBlocks.COBALT_BLOCK.get());
 
         add(ModBlocks.COBALT_ORE.get(),
-                (block) -> createOreDrop(ModBlocks.COBALT_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
+                (block) -> createOreDrop(ModBlocks.COBALT_ORE.get(), ModItems.RAW_COBALT.get()));
         add(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE.get(),
-                (block) -> createOreDrop(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
+                (block) -> createOreDrop(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE.get(), ModItems.RAW_COBALT.get()));
         add(ModBlocks.NETHERRACK_BLACK_OPAL_ORE.get(),
-                (block) -> createOreDrop(ModBlocks.NETHERRACK_BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
+                (block) -> createOreDrop(ModBlocks.NETHERRACK_BLACK_OPAL_ORE.get(), ModItems.RAW_COBALT.get()));
         add(ModBlocks.ENDSTONE_BLACK_OPAL_ORE.get(),
-                (block) -> createOreDrop(ModBlocks.ENDSTONE_BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
+                (block) -> createOreDrop(ModBlocks.ENDSTONE_BLACK_OPAL_ORE.get(), ModItems.RAW_COBALT.get()));
     }
 
     @Override

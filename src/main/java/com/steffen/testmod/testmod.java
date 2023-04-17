@@ -47,10 +47,10 @@ public class testmod {
 		if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
 			event.accept(ModItems.COABLT_INGOT);
 			event.accept(ModItems.BLACK_OPAL);
-			event.accept(ModItems.RAW_BLACK_OPAL);
+			event.accept(ModItems.RAW_COBALT);
 		}
 		if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
-			event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+			event.accept(ModBlocks.COBALT_BLOCK);
 			event.accept(ModBlocks.COBALT_ORE);
 			event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
 			event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);
@@ -67,8 +67,8 @@ public class testmod {
 			event.accept(ModItems.COABLT_INGOT);
 			event.accept(ModItems.BLOCK_SWAPPER);
 			event.accept(ModItems.BLACK_OPAL);
-			event.accept(ModItems.RAW_BLACK_OPAL);
-			event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+			event.accept(ModItems.RAW_COBALT);
+			event.accept(ModBlocks.COBALT_BLOCK);
 			event.accept(ModBlocks.COBALT_ORE);
 			event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
 			event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);

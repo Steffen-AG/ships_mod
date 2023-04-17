@@ -3,11 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "testmod:black_opal_block"
+      "item": "testmod:cobalt_block"
     }
   ],
   "result": {
     "count": 9,
-    "item": "testmod:black_opal"
+    "item": "testmod:cobalt_ingot"
   }
 }
