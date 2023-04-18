@@ -3,6 +3,9 @@ package item;
 import com.steffen.testmod.testmod;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,6 +24,8 @@ public class ModItems {
 	public static final RegistryObject<Item> COABLT_INGOT = ITEMS.register("cobalt_ingot", () -> new Item(new Item.Properties()));
 	
 	public static final RegistryObject<Item> RAW_COBALT = ITEMS.register("raw_cobalt", () -> new Item(new Item.Properties()));
+	
+	public static final RegistryObject<Item> COBALT_SWORD = ITEMS.register("cobalt_sword", () -> new SwordItem(Tiers.NETHERITE, 2, -2.8F, new Item.Properties()));
 	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
