@@ -5,10 +5,14 @@
  "item.testmod.teleport_staff":"Teleport Staff",
  "item.testmod.raw_cobalt": "Raw Cobalt",
  "item.testmod.cobalt_sword": "Cobalt Sword",
+ "item.testmod.cobalt_pickaxe": "Cobalt Pickaxe",
+ "item.testmod.cobalt_shovel": "Cobalt Shovel",
+ "item.testmod.cobalt_axe": "Cobalt Axe",
+ "item.testmod.cobalt_hoe": "Cobalt Hoe",
  "block.testmod.cobalt_block": "Cobalt Block",
  "block.testmod.cobalt_ore": "Cobalt Ore",
  "block.testmod.deepslate_black_opal_ore": "Deepslate Black Opal Ore",
  "block.testmod.netherrack_black_opal_ore": "Netherrack Black Opal Ore",
  "block.testmod.endstone_black_opal_ore": "Endstone Black Opal Ore",
- "creativemodetab.tutorial_tab": "Tutorial Tab"
+ "creativemodetab.tutorial_tab": "Mod Tab"
 }

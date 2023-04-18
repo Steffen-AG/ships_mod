@@ -2,9 +2,12 @@ package item;
 
 import com.steffen.testmod.testmod;
 
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,7 +28,15 @@ public class ModItems {
 	
 	public static final RegistryObject<Item> RAW_COBALT = ITEMS.register("raw_cobalt", () -> new Item(new Item.Properties()));
 	
-	public static final RegistryObject<Item> COBALT_SWORD = ITEMS.register("cobalt_sword", () -> new SwordItem(Tiers.NETHERITE, 2, -2.8F, new Item.Properties()));
+	public static final RegistryObject<Item> COBALT_SWORD = ITEMS.register("cobalt_sword", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4F, (new Item.Properties())));
+	
+	public static final RegistryObject<Item> COBALT_PICKAXE = ITEMS.register("cobalt_pickaxe", () -> new PickaxeItem(Tiers.NETHERITE, 1, -2.8F, (new Item.Properties())));
+	
+	public static final RegistryObject<Item> COBALT_SHOVEL = ITEMS.register("cobalt_shovel", () -> new ShovelItem(Tiers.NETHERITE, 1.5F, -3.0F, (new Item.Properties())));
+	
+	public static final RegistryObject<Item> COBALT_AXE = ITEMS.register("cobalt_axe", () -> new AxeItem(Tiers.NETHERITE, 5.0F, 3.0F, (new Item.Properties())));
+	
+	public static final RegistryObject<Item> COBALT_HOE = ITEMS.register("cobalt_hoe", () -> new HoeItem(Tiers.NETHERITE, -4, 0.0F, (new Item.Properties())));
 	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

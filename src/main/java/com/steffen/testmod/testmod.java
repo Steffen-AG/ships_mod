@@ -63,6 +63,10 @@ public class testmod {
 			event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
 		}
 		if(event.getTab() == ModCreativeModeTabs.TUTORIAL_TAB) {
+			event.accept(ModItems.COBALT_HOE);
+			event.accept(ModItems.COBALT_AXE);
+			event.accept(ModItems.COBALT_SHOVEL);
+			event.accept(ModItems.COBALT_PICKAXE);
 			event.accept(ModItems.COBALT_SWORD);
 			event.accept(ModItems.TELEPORT_STAFF);
 			event.accept(ModItems.COABLT_INGOT);
