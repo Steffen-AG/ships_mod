@@ -8,6 +8,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -34,6 +35,12 @@ public class teleportStaff extends Item {
 		player.getCooldowns().addCooldown(this, 60);
 		player.fallDistance = 0F;
 		world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
+		/*
+		ItemStack item = player.getItemInHand(hand);
+		item.hurtAndBreak(1, player, (p_43276_) -> {
+            p_43276_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
+         });
+         **/
 		return super.use(world, player, hand);
 	}
 
