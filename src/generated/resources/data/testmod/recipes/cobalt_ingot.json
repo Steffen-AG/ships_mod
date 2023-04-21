@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "testmod:cobalt_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "testmod:cobalt_ingot"
+  }
+}

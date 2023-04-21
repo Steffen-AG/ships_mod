@@ -1,0 +1,7 @@
+// 1.19.3	2023-04-21T00:34:37.0566815	Recipes
+5d2f05ce2ae8cfcaa4eb2bdd57d8aa7423b22c4e data/testmod/advancements/recipes/building_blocks/cobalt_ingot.json
+08191e4394ff08d15f661942564acab8e7f75364 data/testmod/advancements/recipes/misc/cobalt_block.json
+20c589b25a520cf7ed17e812f0563e3ffc35850f data/testmod/advancements/recipes/misc/cobalt_ingot_from_smelting_raw_cobalt.json
+2a451400ac2ee0c303f724206e5339a5829517be data/testmod/recipes/cobalt_block.json
+8fc40758f5439d08c9e5b40a192c8fa531a4c379 data/testmod/recipes/cobalt_ingot.json
+ef68141066755b81f6cab6a2bedf0f31f19a0f09 data/testmod/recipes/cobalt_ingot_from_smelting_raw_cobalt.json

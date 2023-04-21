@@ -1,0 +1,7 @@
+// 1.19.3	2023-04-21T01:24:30.8970484	Registries
+86aab1c615cf1cfe65779a64178bd050ab228858 data/testmod/worldgen/configured_feature/cobalt_ore.json
+831d5f991942c2139fbf252baacd7cf4a256e249 data/testmod/worldgen/configured_feature/end_black_opal_ore.json
+9e4145ed88f9a5eb46e8ec95a6765ada7595260e data/testmod/worldgen/configured_feature/nether_black_opal_ore.json
+bd78b6f1af543c86804f12db5c98b2d53eca7158 data/testmod/worldgen/placed_feature/cobalt_placed.json
+fb49c04a01aacdf8f18712a9bb3bf5e14c402bc2 data/testmod/worldgen/placed_feature/end_black_opal_placed.json
+d60dcdd6dff49f7d10afeeabff27003ebcf78bdf data/testmod/worldgen/placed_feature/nether_black_opal_placed.json

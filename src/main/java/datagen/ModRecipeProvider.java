@@ -4,9 +4,11 @@ import com.steffen.testmod.testmod;
 
 import block.ModBlocks;
 import item.ModItems;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -25,25 +27,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         oreSmelting(consumer, List.of(ModItems.RAW_COBALT.get()), RecipeCategory.MISC,
-                ModItems.BLACK_OPAL.get(), 0.7f, 200, "black_opal");
+                ModItems.COABLT_INGOT.get(), 0.7f, 200, "black_opal");
 
-        nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.BLACK_OPAL.get(), RecipeCategory.MISC,
+        nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.COABLT_INGOT.get(), RecipeCategory.MISC,
                 ModBlocks.COBALT_BLOCK.get());
 
-        // ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLACK_OPAL.get())
-        //         .requires(ModBlocks.BLACK_OPAL_BLOCK.get())
-        //         .unlockedBy("has_black_opal_block", inventoryTrigger(ItemPredicate.Builder.item()
-        //                 .of(ModBlocks.BLACK_OPAL_BLOCK.get()).build()))
-        //         .save(consumer);
 
-        // ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_OPAL_BLOCK.get())
-        //         .define('B', ModItems.BLACK_OPAL.get())
-        //         .pattern("BBB")
-        //         .pattern("BBB")
-        //         .pattern("BBB")
-        //         .unlockedBy("has_black_opal", inventoryTrigger(ItemPredicate.Builder.item()
-        //                 .of(ModItems.BLACK_OPAL.get()).build()))
-        //         .save(consumer);
+
+        /*
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COBALT_SWORD.get())
+                .define('B', ModItems.COABLT_INGOT.get())
+                .define('S', Items.STICK)
+                .pattern(" B ")
+                .pattern(" B ")
+                .pattern(" s ")
+                .unlockedBy("has_cobalt_sword", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.COBALT_SWORD.get()).build()))
+                .save(consumer);
+
+         */
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> p_250654_, List<ItemLike> p_250172_, RecipeCategory p_250588_, ItemLike p_251868_, float p_250789_, int p_252144_, String p_251687_) {

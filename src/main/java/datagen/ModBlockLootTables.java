@@ -28,6 +28,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 (block) -> createOreDrop(ModBlocks.NETHERRACK_BLACK_OPAL_ORE.get(), ModItems.RAW_COBALT.get()));
         add(ModBlocks.ENDSTONE_BLACK_OPAL_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.ENDSTONE_BLACK_OPAL_ORE.get(), ModItems.RAW_COBALT.get()));
+
+
+
     }
 
     @Override
