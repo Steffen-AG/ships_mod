@@ -21,9 +21,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.COBALT_BLOCK);
         blockWithItem(ModBlocks.COBALT_ORE);
-        blockWithItem(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
-        blockWithItem(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);
-        blockWithItem(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_COBALT_ORE);
+        blockWithItem(ModBlocks.NETHERRACK_COBALT_ORE);
 
     }
 

@@ -9,10 +9,10 @@
  "item.testmod.cobalt_shovel": "Cobalt Shovel",
  "item.testmod.cobalt_axe": "Cobalt Axe",
  "item.testmod.cobalt_hoe": "Cobalt Hoe",
+ "item.testmod.ban_hammer": "Ban Hammer",
  "block.testmod.cobalt_block": "Cobalt Block",
  "block.testmod.cobalt_ore": "Cobalt Ore",
- "block.testmod.deepslate_black_opal_ore": "Deepslate Black Opal Ore",
- "block.testmod.netherrack_black_opal_ore": "Netherrack Black Opal Ore",
- "block.testmod.endstone_black_opal_ore": "Endstone Black Opal Ore",
+ "block.testmod.deepslate_cobalt_ore": "Deepslate Cobalt Ore",
+ "block.testmod.netherrack_cobalt_ore": "Netherrack Cobalt Ore",
  "creativemodetab.tutorial_tab": "Mod Tab"
 }

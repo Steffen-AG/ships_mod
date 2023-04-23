@@ -1,6 +1,5 @@
-// 1.19.3	2023-04-21T01:24:30.8940675	Loot Tables
+// 1.19.3	2023-04-23T01:01:47.8846291	Loot Tables
 a97c37238eabeecdb0fe1a1f927647d47f5ba4fb data/testmod/loot_tables/blocks/cobalt_block.json
 046b6866d380d7d801b6a61a71bf401cd80efec3 data/testmod/loot_tables/blocks/cobalt_ore.json
-5659a96619bd457d1a5fe2acecc94e10748c92f5 data/testmod/loot_tables/blocks/deepslate_black_opal_ore.json
-7f212dbc5314b0025efe917cde33dca6d76d8fe6 data/testmod/loot_tables/blocks/endstone_black_opal_ore.json
-94c7fbcd84a532af08bff21a93e24dd7a2a669f7 data/testmod/loot_tables/blocks/netherrack_black_opal_ore.json
+5c4181a9c1ffcce8287bb204b3f75438df2259be data/testmod/loot_tables/blocks/deepslate_cobalt_ore.json
+882ee3a8611a6b43d78696a452a6447a4fbc5a4f data/testmod/loot_tables/blocks/netherrack_cobalt_ore.json

@@ -40,6 +40,27 @@ public class BanHammer extends Item{
 	   }
 	**/
 	@Override
+	public boolean hurtEnemy(ItemStack p_41395_, LivingEntity p_41396_, LivingEntity p_41397_) {
+		Level world = p_41396_.getLevel();
+		Player player = world.getNearestPlayer(p_41396_, 100);
+		BlockPos blockpos = new BlockPos(p_41396_.getX(), p_41396_.getY() + 10, p_41396_.getZ());
+		LightningBolt bolt = EntityType.LIGHTNING_BOLT.create(world);
+		world.setRainLevel(1.0F);
+		world.setThunderLevel(1.0F);
+		p_41396_.moveTo(blockpos, 0.0F, 0.0F);
+		bolt.moveTo(blockpos, 0.0F, 0.0F);
+		world.addFreshEntity(bolt);
+		world.playSound(player , p_41396_.getX(), p_41396_.getY(), p_41396_.getZ(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
+		player.sendSystemMessage(Component.literal("BANNNNNNNED"));
+		p_41396_.setHealth(0);
+		p_41395_.hurtAndBreak(1, p_41397_, (p_43296_) -> {
+			p_43296_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
+		});
+		return true;
+
+	}
+
+	@Override
 	public InteractionResult interactLivingEntity(ItemStack p_41398_, Player p_41399_, LivingEntity p_41400_, InteractionHand p_41401_) {
 		
 		Level world = p_41400_.getLevel();

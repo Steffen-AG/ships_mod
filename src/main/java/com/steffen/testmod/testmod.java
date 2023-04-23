@@ -2,6 +2,7 @@ package com.steffen.testmod;
 
 
 
+import entity.ModEntities;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -34,6 +35,7 @@ public class testmod {
 		
 		ModItems.register(modEventBus);
 		ModBlocks.register(modEventBus);
+		ModEntities.register(modEventBus);
 		
 		modEventBus.addListener(this::commonSetup);
 		MinecraftForge.EVENT_BUS.register(this);
@@ -52,17 +54,14 @@ public class testmod {
 		if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
 			event.accept(ModBlocks.COBALT_BLOCK);
 			event.accept(ModBlocks.COBALT_ORE);
-			event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
-			event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);
-			event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
+
 		}
 		if(event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
 			event.accept(ModBlocks.COBALT_ORE);
-			event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
-			event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);
-			event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
+
 		}
 		if(event.getTab() == ModCreativeModeTabs.TUTORIAL_TAB) {
+			event.accept(ModItems.BAN_HAMMER);
 			event.accept(ModItems.COBALT_HOE);
 			event.accept(ModItems.COBALT_AXE);
 			event.accept(ModItems.COBALT_SHOVEL);
@@ -75,9 +74,8 @@ public class testmod {
 			event.accept(ModItems.RAW_COBALT);
 			event.accept(ModBlocks.COBALT_BLOCK);
 			event.accept(ModBlocks.COBALT_ORE);
-			event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
-			event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);
-			event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
+			event.accept(ModBlocks.DEEPSLATE_COBALT_ORE);
+			event.accept(ModBlocks.NETHERRACK_COBALT_ORE);
 		}
 	}
 	

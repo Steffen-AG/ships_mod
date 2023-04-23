@@ -35,12 +35,12 @@ public class teleportStaff extends Item {
 		player.getCooldowns().addCooldown(this, 60);
 		player.fallDistance = 0F;
 		world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);
-		/*
+
 		ItemStack item = player.getItemInHand(hand);
 		item.hurtAndBreak(1, player, (p_43276_) -> {
-            p_43276_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
+            p_43276_.broadcastBreakEvent(hand);
          });
-         **/
+
 		return super.use(world, player, hand);
 	}
 

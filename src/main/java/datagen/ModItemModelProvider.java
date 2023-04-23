@@ -32,6 +32,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.COBALT_SHOVEL);
         handheldItem(ModItems.COBALT_SWORD);
         handheldItem(ModItems.TELEPORT_STAFF);
+        handheldItem(ModItems.BAN_HAMMER);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

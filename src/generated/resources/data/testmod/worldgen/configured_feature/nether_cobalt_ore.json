@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "testmod:netherrack_black_opal_ore"
+          "Name": "testmod:netherrack_cobalt_ore"
         },
         "target": {
           "block": "minecraft:netherrack",

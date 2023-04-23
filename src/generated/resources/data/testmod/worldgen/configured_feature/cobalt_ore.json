@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "testmod:cobalt_ore"
+          "Name": "testmod:deepslate_cobalt_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

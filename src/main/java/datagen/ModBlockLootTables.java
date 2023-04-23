@@ -22,12 +22,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         add(ModBlocks.COBALT_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.COBALT_ORE.get(), ModItems.RAW_COBALT.get()));
-        add(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE.get(),
-                (block) -> createOreDrop(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE.get(), ModItems.RAW_COBALT.get()));
-        add(ModBlocks.NETHERRACK_BLACK_OPAL_ORE.get(),
-                (block) -> createOreDrop(ModBlocks.NETHERRACK_BLACK_OPAL_ORE.get(), ModItems.RAW_COBALT.get()));
-        add(ModBlocks.ENDSTONE_BLACK_OPAL_ORE.get(),
-                (block) -> createOreDrop(ModBlocks.ENDSTONE_BLACK_OPAL_ORE.get(), ModItems.RAW_COBALT.get()));
+        add(ModBlocks.DEEPSLATE_COBALT_ORE.get(),
+                (block) -> createOreDrop(ModBlocks.DEEPSLATE_COBALT_ORE.get(), ModItems.RAW_COBALT.get()));
+        add(ModBlocks.NETHERRACK_COBALT_ORE.get(),
+                (block) -> createOreDrop(ModBlocks.NETHERRACK_COBALT_ORE.get(), ModItems.RAW_COBALT.get()));
 
 
 

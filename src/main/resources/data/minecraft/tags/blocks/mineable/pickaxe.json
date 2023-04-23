@@ -2,7 +2,8 @@
 	"replace": false,
 	"values": [
 		"testmod:cobalt_ore",
-		"testmod:cobalt_block"
+		"testmod:cobalt_block",
+		"testmod:netherrack_cobalt_ore"
 	]
 
 
