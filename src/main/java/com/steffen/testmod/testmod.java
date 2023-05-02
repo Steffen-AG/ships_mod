@@ -3,6 +3,12 @@ package com.steffen.testmod;
 
 
 import entity.ModEntities;
+import entity.custom.CoolBoat;
+import entity.render.CoolBoatRenderer;
+import net.minecraft.client.renderer.entity.BoatRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -48,7 +54,6 @@ public class testmod {
 	private void addCreative(CreativeModeTabEvent.BuildContents event) {
 		if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
 			event.accept(ModItems.COABLT_INGOT);
-			event.accept(ModItems.BLACK_OPAL);
 			event.accept(ModItems.RAW_COBALT);
 		}
 		if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
@@ -61,6 +66,7 @@ public class testmod {
 
 		}
 		if(event.getTab() == ModCreativeModeTabs.TUTORIAL_TAB) {
+			event.accept(ModItems.COBALT_BOAT);
 			event.accept(ModItems.BAN_HAMMER);
 			event.accept(ModItems.COBALT_HOE);
 			event.accept(ModItems.COBALT_AXE);
@@ -70,7 +76,6 @@ public class testmod {
 			event.accept(ModItems.TELEPORT_STAFF);
 			event.accept(ModItems.COABLT_INGOT);
 			event.accept(ModItems.BLOCK_SWAPPER);
-			event.accept(ModItems.BLACK_OPAL);
 			event.accept(ModItems.RAW_COBALT);
 			event.accept(ModBlocks.COBALT_BLOCK);
 			event.accept(ModBlocks.COBALT_ORE);
@@ -83,7 +88,7 @@ public class testmod {
 	public static class ClientModEvents {
 		@SubscribeEvent
 		public static void onClientSetup(FMLClientSetupEvent event) {
-			
+			//EntityRenderers.register(ModEntities.COOLBOAT.get(), CoolBoatRenderer::new);
 		}
 	}
 	

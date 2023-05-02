@@ -1,5 +1,5 @@
-// 1.19.3	2023-04-23T01:11:56.8663123	Registries
+// 1.19.3	2023-05-01T20:49:50.6337258	Registries
 240c0c7c921120460e927fe7ec0620ad07f31ca0 data/testmod/worldgen/configured_feature/cobalt_ore.json
 9b505960481696c71b8b19ff393aaa9d0d7f7678 data/testmod/worldgen/configured_feature/nether_cobalt_ore.json
-bd78b6f1af543c86804f12db5c98b2d53eca7158 data/testmod/worldgen/placed_feature/cobalt_placed.json
+2816fb787c7ef256000c87e92a0635ba21fab456 data/testmod/worldgen/placed_feature/cobalt_placed.json
 e7126cc47f2a4c94f2757b5d5a903cbc0ec6db01 data/testmod/worldgen/placed_feature/nether_cobalt_placed.json

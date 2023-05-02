@@ -28,8 +28,8 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?,?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, COBALT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_COBALT_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(16,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(80))));
+                ModOrePlacement.rareOrePlacement(16,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(-30))));
         register(context, NETHER_COBALT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COBALT_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(16,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(80))));

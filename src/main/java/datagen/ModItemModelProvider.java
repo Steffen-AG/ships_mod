@@ -21,7 +21,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.BLACK_OPAL);
         simpleItem(ModItems.RAW_COBALT);
         simpleItem(ModItems.COABLT_INGOT);
 
